@@ -35,6 +35,7 @@ fi
 git config --global --unset gpg.format
 git config --global user.signingkey "$GPG_KEY"
 git config --global gpg.program $(which gpg)
+git config --global commit.gpgsign true
 
 # Ensure GPG_TTY is set in shell profile
 if ! grep -q 'export GPG_TTY=$(tty)' ~/.bash_profile; then
